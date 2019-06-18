@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>BNB DZ {% block title %}Welcome!{% endblock %}</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/app.css">
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
@@ -22,6 +23,11 @@
                     Accueil
                 </a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ path('ads_index') }}">
+                    Annonces
+                </a>
+            </li>
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -33,9 +39,9 @@
     </div>
 </nav>
 {% block body %}{% endblock %}
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 {% block javascripts %}{% endblock %}
 </body>
 </html>
