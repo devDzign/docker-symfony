@@ -1,5 +1,5 @@
 mercure:
   hubs:
     default:
-      url: '%env(symfony.localhost)%'
-      jwt: '%env()%'
+      url: '%env(MERCURE_PUBLISH_URL)%'
+      jwt: '%env(MERCURE_JWT_SECRET)%'
