@@ -4,6 +4,7 @@ namespace App\DataFixtures;
 
 use App\Entity\Ad;
 use App\Entity\Image;
+use App\Entity\Session;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Faker\Factory;
@@ -17,6 +18,15 @@ class AppFixtures extends Fixture
 
 
         for ($i = 0; $i <= 300; $i++) {
+
+            $session = new Session();
+
+            $session->setAuthor($faker->userName);
+            $session->setSummary($faker->sentence());
+            $session->setDatetime($faker->dateTime());
+
+            $manager->persist($session);
+
             $ad           = new Ad();
             $title        = $faker->sentence();
             $coverImage   = $faker->imageUrl(1000, 350);

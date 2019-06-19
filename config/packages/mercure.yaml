@@ -1,0 +1,5 @@
+mercure:
+  hubs:
+    default:
+      url: '%env(symfony.localhost)%'
+      jwt: '%env()%'
